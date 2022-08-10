@@ -98,8 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				847BD8C328610847009A1368 /* netflix2App.swift */,
-				847BD8D4286109E4009A1368 /* Home */,
 				847BD8C528610847009A1368 /* ContentView.swift */,
+				847BD8D4286109E4009A1368 /* Home */,
 				847BD8C72861084D009A1368 /* Assets.xcassets */,
 				847BD8C92861084D009A1368 /* Preview Content */,
 			);
