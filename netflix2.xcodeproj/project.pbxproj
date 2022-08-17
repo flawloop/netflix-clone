@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8437844D28933BDF002D6E1C /* HomeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8437844C28933BDF002D6E1C /* HomeStack.swift */; };
+		8447898128AD85CB003A173C /* PopularMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447898028AD85CB003A173C /* PopularMovieView.swift */; };
+		8447898328AD8C69003A173C /* SearchResultsGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447898228AD8C69003A173C /* SearchResultsGrid.swift */; };
 		847BD8C428610847009A1368 /* netflix2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BD8C328610847009A1368 /* netflix2App.swift */; };
 		847BD8C628610847009A1368 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847BD8C528610847009A1368 /* ContentView.swift */; };
 		847BD8C82861084D009A1368 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847BD8C72861084D009A1368 /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		8437844C28933BDF002D6E1C /* HomeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStack.swift; sourceTree = "<group>"; };
+		8447898028AD85CB003A173C /* PopularMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieView.swift; sourceTree = "<group>"; };
+		8447898228AD8C69003A173C /* SearchResultsGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsGrid.swift; sourceTree = "<group>"; };
 		847BD8C028610847009A1368 /* netflix2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = netflix2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847BD8C328610847009A1368 /* netflix2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = netflix2App.swift; sourceTree = "<group>"; };
 		847BD8C528610847009A1368 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 			children = (
 				84D29DA428A47A9300C8CFF2 /* SearchBar.swift */,
 				84D29DA628A52B8E00C8CFF2 /* SearchView.swift */,
+				8447898228AD8C69003A173C /* SearchResultsGrid.swift */,
+				8447898028AD85CB003A173C /* PopularMovieView.swift */,
 				84D29DA828A52BED00C8CFF2 /* SearchVM.swift */,
 			);
 			path = Search;
@@ -295,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8447898128AD85CB003A173C /* PopularMovieView.swift in Sources */,
 				847E74242886D62C002D1355 /* EpisodesView.swift in Sources */,
 				84D29DAB28A5323800C8CFF2 /* GenerateMovies.swift in Sources */,
 				84D29DA928A52BED00C8CFF2 /* SearchVM.swift in Sources */,
@@ -302,6 +309,7 @@
 				847BD8DE28611407009A1368 /* ClobalHelpers.swift in Sources */,
 				847E741B28857CE9002D1355 /* Trailer.swift in Sources */,
 				84D29DA728A52B8E00C8CFF2 /* SearchView.swift in Sources */,
+				8447898328AD8C69003A173C /* SearchResultsGrid.swift in Sources */,
 				847E7414287B4968002D1355 /* Episode.swift in Sources */,
 				84D29DA028A47A2D00C8CFF2 /* ActivityIndicator.swift in Sources */,
 				847BD8D2286109BA009A1368 /* HomeView.swift in Sources */,
