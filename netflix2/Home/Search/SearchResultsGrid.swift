@@ -22,12 +22,15 @@ struct SearchResultsGrid: View {
         LazyVGrid(columns: columns) {
             ForEach(movies, id: \.id) { movie in
                 StandardHomeMovie(movie: movie)
-                    .frame(height: 160)
+                    .frame(width:100, height: 160)
+                    .padding(.horizontal, 10)
+                    .clipped()
                     .onTapGesture(perform: {
                         movieDetailToShow = movie
                     })
             }
         }
+        .padding(.horizontal, 8)
     }
 }
 
