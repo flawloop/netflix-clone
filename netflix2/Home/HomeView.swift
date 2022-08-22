@@ -37,6 +37,7 @@ struct HomeView: View {
                                 .padding(.top,-110)
                                 .zIndex(-1)  //layering like in Photoshop
                         
+                    MoviePreviewRow(movies: exampleMovies)
                     
                     HomeStack(vm: vm, topRowSelection: topRowSelection, selecredGenre: homeGenre, movieDetailToShow: $movieDetailToShow)
                 }
