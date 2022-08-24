@@ -21,6 +21,9 @@ struct HomeView: View {
     @State private var showGenreSelection = false
     @State private var showTopRowSelection = false
     
+    @Binding var showPreviewFullscreen: Bool
+    @Binding var previewStartingIndex: Int
+    
     var body: some View {
         ZStack {
             Color.black
@@ -32,14 +35,21 @@ struct HomeView: View {
                     
                     TopRowButtons(topRowSelection: $topRowSelection, homeGenre: $homeGenre, showGenreSelection: $showGenreSelection, showTopRowSelection: $showTopRowSelection)
                     
-                        TopMoviePreview(movie: exampleMovie1)
-                                .frame(width: screen.width)
-                                .padding(.top,-110)
-                                .zIndex(-1)  //layering like in Photoshop
-                        
-                    MoviePreviewRow(movies: exampleMovies)
+                    TopMoviePreview(movie: exampleMovie1)
+                        .frame(width: screen.width)
+                        .padding(.top,-110)
+                        .zIndex(-1)  //layering like in Photoshop
                     
-                    HomeStack(vm: vm, topRowSelection: topRowSelection, selecredGenre: homeGenre, movieDetailToShow: $movieDetailToShow)
+                    MoviePreviewRow(
+                        movies: exampleMovies,
+                        showPreviewFullscreen: $showPreviewFullscreen,
+                        previewStartingIndex: $previewStartingIndex)
+                    
+                    HomeStack(vm: vm, topRowSelection: topRowSelection,
+                              selecredGenre: homeGenre,
+                              movieDetailToShow: $movieDetailToShow,
+                              showPreviewFullscreen: $showPreviewFullscreen,
+                              previewStartingIndex: $previewStartingIndex)
                 }
             }
             if movieDetailToShow != nil {
@@ -130,7 +140,9 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(
+            showPreviewFullscreen: .constant(false),
+            previewStartingIndex: .constant(0))
     }
 }
 

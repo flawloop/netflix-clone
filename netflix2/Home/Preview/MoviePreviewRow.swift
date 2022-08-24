@@ -10,6 +10,9 @@ import SwiftUI
 struct MoviePreviewRow: View {
     var movies: [Movie]
     
+    @Binding var showPreviewFullscreen: Bool
+    @Binding var previewStartingIndex: Int
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Previews")
@@ -26,6 +29,10 @@ struct MoviePreviewRow: View {
                             .frame(width: 120, height: 120)
                             .padding(.trailing, 14)
                             .padding(.leading, 6)
+                            .onTapGesture {
+                                previewStartingIndex = movieIndex
+                                showPreviewFullscreen = true
+                            }
                     }
                 }
             }
@@ -39,7 +46,9 @@ struct MoviePreviewRow_Previews: PreviewProvider {
         ZStack {
             Color.black
                 .edgesIgnoringSafeArea(.all)
-            MoviePreviewRow(movies: exampleMovies)
+            MoviePreviewRow(movies: exampleMovies,
+                            showPreviewFullscreen: .constant(false),
+                            previewStartingIndex: .constant(0))
             
         }
     }
