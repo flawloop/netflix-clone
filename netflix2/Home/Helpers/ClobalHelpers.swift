@@ -136,7 +136,7 @@ let exampleMovie7 = Movie(
     previewVideoURL: exampleVideoURL)
 
 var exampleMovies: [Movie] {
-    [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7].shuffled()
+    [exampleMovie1, exampleMovie2, exampleMovie3, exampleMovie4, exampleMovie5, exampleMovie6, exampleMovie7]
 }
 
 let exampleEpisodeInfo1 = CurrentEpisodeInfo(episodeName: "Beginnings and Endings", description: "Six months after disappearances, the police form a task force. In 2052, Jonas learns that most of the Winded perished in an apocalyptic event.", season: 2, episode: 1)
